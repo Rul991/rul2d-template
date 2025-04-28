@@ -74,9 +74,7 @@ class TestScene extends GameScene {
     }
 }
 
-const world = new GameWorld({
-    useCulling: false
-})
+const world = new GameWorld()
 
 Camera.addStandardWheelListener(world.camera)
 world.addScene('test', new TestScene())
