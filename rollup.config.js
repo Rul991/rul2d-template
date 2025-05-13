@@ -1,6 +1,7 @@
 import dts from 'rollup-plugin-dts';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
 export default [
@@ -10,15 +11,15 @@ export default [
       {
         file: 'dist/index.js',
         format: 'umd',
-        name: 'rul2d'
+        name: 'rul2d-template',
+        sourcemap: false
       }
     ],
     plugins: [
       nodeResolve({browser: true}),
       commonjs(),
-      typescript({
-        tsconfig: './tsconfig.json'
-      })
+      typescript(),
+      terser({keep_classnames: true})
     ],
   },
 
@@ -27,7 +28,8 @@ export default [
     output: [
       {
         file: 'dist/index.d.ts',
-        format: 'es',
+        format: 'umd',
+        name: 'rul2d-template'
       },
     ],
     plugins: [

@@ -1,6 +1,6 @@
 # rul2d Development Template
 
-A template for quickly starting development with rul2d.
+A template for quickly starting development with `rul2d`.
 
 **Commands**:
 
