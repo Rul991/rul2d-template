@@ -27,5 +27,12 @@
   "dependencies": {
     "rul2d": "latest"
   },
-  "type": "module"
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  }
 }
