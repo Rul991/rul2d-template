@@ -28,7 +28,7 @@ export default [
     output: [
       {
         file: 'dist/index.d.ts',
-        format: 'umd',
+        format: 'es',
         name: 'rul2d-template'
       },
     ],
